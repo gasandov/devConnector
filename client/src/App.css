@@ -1,0 +1,27 @@
+img {
+    width: 100%;
+}
+
+.landing {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.landing-inner {
+    padding-top: 80px;
+}
+
+.dark-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    background: url('./img/landing.png') no-repeat;
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card-form {
+    opacity: 0.9;
+}

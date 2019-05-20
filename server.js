@@ -18,7 +18,7 @@ const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
-    .connect('mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb')
+    .connect(db)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
 

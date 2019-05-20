@@ -13,10 +13,15 @@ const validateLoginInput = require('../../validation/login');
 // Load User Model
 const User = require('../../models/User');
 
-// @route   GET api/users/test
-// @desc    Tests users route
-// @access  Public 
-router.get('/test', (req, res) => res.json({ msg: "Users Works" }));
+// @route GET api/users/all
+// @desc GET all users (will be removed after)
+// @access Public
+router.get('/all', (req, res) => {
+    User.find({})
+    .then(users => {
+        return res.json(users);
+    });
+});
 
 // @route   GET api/users/register
 // @desc    Register user
