@@ -1,5 +1,5 @@
-module.exports = {
-    // mongoURI: 'mongodb+srv://admin:admin@gasandov-j8zys.mongodb.net/test?retryWrites=true',
-    mongoURI: 'mongodb://127.0.0.1:27017/?gssapiServiceName=mongodb',
-    secretOrKey: 'secret'
+if (process.env.NODE_ENV === 'production') {
+    module.exports = require('./keys_prod');
+} else {
+    module.exports = require('./keys_dev');
 }
